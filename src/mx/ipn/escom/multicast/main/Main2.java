@@ -13,13 +13,19 @@ import mx.ipn.escom.files.handler.GenericFileHandler;
 import mx.ipn.escom.sockets.datagram.GenericSocket;
 import mx.ipn.escom.sockets.datagram.MulticastS;
 
-public class Main {
+public class Main2 {
 
 	public static void main(String Args[]) throws IOException
 	{
-		GenericSocket recibe=new MulticastS();
+		GenericSocket envia=new MulticastS();
 		
-		recibe.receiveFile("recibidos1/");
-		//System.out.println("Termino");
+		JFileChooser jfc=new JFileChooser();
+		int r=jfc.showOpenDialog(null);
+		if(r==JFileChooser.APPROVE_OPTION)
+		{
+			File f=jfc.getSelectedFile();
+			envia.sendFile(f);
+		}
+		//		System.out.println("Termino");
 	}
 }

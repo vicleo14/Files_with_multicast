@@ -41,6 +41,7 @@ public class FileHandlerV implements GenericFileHandler<byte[]> {
 	public void writeFile(String path, String name, byte[] data) {
 		try
 		{
+			//System.out.println("Tamanio recibido en FileHandlerV::"+data.length);
 			File pathF=new File(path);
 			if(!pathF.exists() || !pathF.isDirectory())
 			{

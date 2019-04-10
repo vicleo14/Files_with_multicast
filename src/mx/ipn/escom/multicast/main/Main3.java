@@ -13,13 +13,13 @@ import mx.ipn.escom.files.handler.GenericFileHandler;
 import mx.ipn.escom.sockets.datagram.GenericSocket;
 import mx.ipn.escom.sockets.datagram.MulticastS;
 
-public class Main {
+public class Main3 {
 
 	public static void main(String Args[]) throws IOException
 	{
 		GenericSocket recibe=new MulticastS();
 		
-		recibe.receiveFile("recibidos1/");
+		recibe.receiveFile("recibidos2/");
 		//System.out.println("Termino");
 	}
 }
